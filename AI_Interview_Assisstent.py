@@ -3,8 +3,8 @@ import speech_recognition as sr
 import pyttsx3
 
 # Replace with your actual API key
-client = openai.OpenAI(api_key="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")
-
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 # Initialize recognizer and TTS engine
 recognizer = sr.Recognizer()
 mic = sr.Microphone()
